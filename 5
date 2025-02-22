@@ -1,0 +1,34 @@
+z=int(input('initial balance: '))
+i=float(input('income: '))
+o=float(input('outcome: '))
+b=z+i-o
+print('final balance: ',b)
+
+
+
+class BankAccount:
+    def __init__(self):
+        self.account = 0
+
+    def deposit(self, amount):
+        if amount > 0:
+            self.account += amount
+            print(f"Deposited: {amount}. New balance: {self.account}")
+        else:
+            print("Invalid deposit amount.")
+
+    def withdrawal(self, amount):
+        if amount > self.account:
+            print("Not enough money in balance.")
+        else:
+            self.account -= amount
+            print(f"Withdrew: {amount}. New balance: {self.account}")
+
+    def check_balance(self):
+        print(f"Current balance: {self.account}")
+
+# Example usage:
+account = BankAccount()
+account.deposit(100)
+account.withdrawal(50)
+account.check_balance()
