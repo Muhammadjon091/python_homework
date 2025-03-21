@@ -23,3 +23,26 @@ def insert_underscore(txt):
 
 txt = input("Matn kiriting: ")
 print(insert_underscore(txt))
+
+
+# Read an integer from input
+n = int(input())
+# Loop from 0 to n-1 and print the square of each number
+for i in range(n):
+    print(i ** 2)
+
+
+# Initialize counter
+i = 1  
+# Loop until 10
+while i <= 10:
+    print(i)
+    i += 1
+
+# Loop from 1 to 5
+for i in range(1, 6):
+    for j in range(1, i + 1):
+        print(j, end=" ")
+    print()  # Move to the next line
+
+
